@@ -73,3 +73,6 @@ yarn-error.log
 # Compiled build
 build/**
 
+
+# Local Netlify folder
+.netlify
