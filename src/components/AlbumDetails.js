@@ -17,6 +17,7 @@ export default class AlbumDetails extends React.Component {
           <hr />
           <Query query={ALBUM_DETAILS_SEARCH_QUERY} variables={{ mbid }}>
             {({ loading, error, data }) => {
+              if (error) return <h4>Something went wrong.</h4>;
               if (loading) return <h4>Loading...</h4>;
 
               const {

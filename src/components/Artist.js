@@ -1,5 +1,4 @@
 import React from 'react';
-import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import ListItem from './listItem';
@@ -27,7 +26,8 @@ class artist extends React.Component {
         <Query query={ARTIST_SEARCH_QUERY} variables={{ mbid }}>
           {
             ({ loading, error, data }) => {
-              if (loading) return <h4>Loading...</h4>
+              if (error) return <h4>Something went wrong.</h4>;
+              if (loading) return <h4>Loading...</h4>;
 
               const { sortName, country, gender, type } = data.lookup.artist;
 
@@ -44,7 +44,7 @@ class artist extends React.Component {
                     </div>
                     <div className="col-md-2">
                       <button className="btn btn-secondary" onClick={() => this.handleClick(mbid, sortName)}>
-                        <img src={FavoriteIcon} alt="Artists" style={{ width: 20, display: 'block', margin: 'auto' }} />
+                        <img src={FavoriteIcon} alt="Artists" style={{ width: 20, display: 'inline', margin: 'auto' }} />
                       </button>
                     </div>
                   </div>
@@ -66,11 +66,6 @@ class artist extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-
-  }
-}
 const mapDispatchToProps = (dispatch) => {
 
   return {
@@ -78,4 +73,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(artist)
+export default connect(mapDispatchToProps)(artist)

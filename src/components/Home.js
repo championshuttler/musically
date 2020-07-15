@@ -1,6 +1,5 @@
 import React from "react";
 import { Query } from "react-apollo";
-import { debounce } from "lodash";
 import SearchItem from "./SearchItem";
 import { HOME_SEARCH_QUERY } from "./SearchQuery";
 

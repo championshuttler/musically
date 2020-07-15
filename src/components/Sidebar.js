@@ -39,8 +39,7 @@ class Sidebar extends React.Component {
                               alt="Artists"
                               style={{
                                 width: 20,
-                                display: "block",
-                                margin: "auto",
+                                display: "inline",
                               }}
                             />
                           </button>

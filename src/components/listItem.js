@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function listItem({ src: { id, title, date } }) {
+export default function listItem({ src: { title, date } }) {
   return (
     <div>
       <div className="card card-body mb-3">
