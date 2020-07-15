@@ -66,6 +66,11 @@ class artist extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
 
   return {
@@ -73,4 +78,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapDispatchToProps)(artist)
+export default connect(mapStateToProps, mapDispatchToProps)(artist)

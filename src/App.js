@@ -15,6 +15,7 @@ const client = new ApolloClient({
 
 export class App extends Component {
   render() {
+    localStorage.setItem('search', "");
     return (
       <div>
         <SideBar />

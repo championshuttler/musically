@@ -1,6 +1,6 @@
 import {
   ADD_TO_FAVORITE,
-  REMOTE_ARTIST,
+  REMOVE_ARTIST,
 } from "../actions/action-types/constants";
 import { isEmpty, max } from "lodash";
 
@@ -77,7 +77,7 @@ const Reducer = (state = initState, action) => {
     }
   }
   //INSIDE Sidebar COMPONENT
-  if (action.type === REMOTE_ARTIST) {
+  if (action.type === REMOVE_ARTIST) {
     let maxIndex = findMaxIndex();
 
     for (let i = 0; i <= maxIndex; i++) {

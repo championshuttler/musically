@@ -12,10 +12,18 @@ export class Home extends React.Component {
   }
 
   updateSearch = (e) => {
+
     this.setState({
       search: e.target.value,
     });
+    localStorage.setItem('search', e.target.value);;
   };
+
+  componentDidMount() {
+    if (localStorage.getItem('search')) {
+      this.setState({ search: localStorage.getItem('search') })
+    }
+  }
 
 
   render() {

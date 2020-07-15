@@ -1,4 +1,4 @@
-import { ADD_TO_FAVORITE, REMOTE_ARTIST } from "./action-types/constants";
+import { ADD_TO_FAVORITE, REMOVE_ARTIST } from "./action-types/constants";
 
 //add cart action
 export const addToCart = (id, name) => {
@@ -11,7 +11,7 @@ export const addToCart = (id, name) => {
 //remove item action
 export const removeItem = (id) => {
   return {
-    type: REMOTE_ARTIST,
+    type: REMOVE_ARTIST,
     id,
   };
 };
